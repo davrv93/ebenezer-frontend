@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Ebenezer software</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li ui-sref="root.dash">
+                <a ui-sref="root.settings">Menú</a>
+            </li>
+            <li>
+                <a ui-sref="root.settings">Mi perfil</a>
+            </li>
+            <li>
+                <a ui-sref="root.settings">Guía de valoración</a>
+            </li>
+            <li>
+                <a ui-sref="root.settings">Configuración</a>
+            </li>
+            <li>
+                <a href="#">Usuarios</a>
+            </li>
+            <li>
+                <a href="#">Accesos</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+        <div ui-view="content"></div>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>

@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Etiquetas diagnóstico</h2>
+    <br />
+    <div class="alert alert-primary" role="alert" ng-show="success">
+        El cambio fue guardado correctamente
+    </div>
+    <div class="row">
+
+        <div class="col-sm-6 py-2">
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Código</label>
+                    <input type="text" class="form-control" ng-model="items.code" value="{{items.code}}" placeholder="Escriba aquí el código">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Nombre</label>
+                    <input type="text" class="form-control" ng-model="items.name" value="{{items.name}}" placeholder="Escriba aquí el nombre">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripción</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="items.description"
+                        value="{{items.description}}"></textarea>
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+    <button type="button" class="btn btn-dark" ui-sref="root.diagnostic_tag">Cancelar</button>
+    <button type="button" class="btn btn-primary mb-2" ng-click="items.id?update():save()">Guardar</button>
+    <button type="button" class="btn btn-primary mb-2" ng-click="items.id? update(true):save(true)">Guardar y volver</button>
+</div>

@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Etiquetas diagnóstico</h2>
+    <br />
+    <div class="row" style="margin-left:5px">
+
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Buscador</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escriba aquí el nombre de búsqueda">
+
+        </div>
+
+    </div>
+    <button class="btn btn-primary btn-sm mb-2" ng-click="create()"><i class=" fa fa-plus
+        "></i>&emsp; Crear
+        etiqueta</button>
+
+    <table class=" table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data.results track by $index">
+                <th scope="row">{{$index + 1 }}</th>
+                <td>{{x.name}}</td>
+                <td class="justify-content-end">
+                    <button class="btn btn-primary btn-sm mb-2" ng-click="edit(x.id)"><i class=" fa fa-edit
+                        "></i>
+                        Editar</button>
+
+                    <button class=" btn btn-primary btn-sm mb-2" ng-click="delete(x.id)"><i class=" fa fa-trash
+                            "></i>
+                        Eliminar</button>
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+            <li class="page-item " ng-click="list(page-1)" ng-disabled="!data.previous" ng-class="">
+                <a class="page-link">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">{{page}}</a></li>
+            <li class="page-item" ng-click="list(page+1)" ng-disabled="!data.next">
+                <a class="page-link">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<style>
+    .form-control-borderless {
+        border: none;
+    }
+
+    .form-control-borderless:hover,
+    .form-control-borderless:active,
+    .form-control-borderless:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+    }
+
+    table.table td,
+    table.table th {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+</style>

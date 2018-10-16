@@ -1,0 +1,31 @@
+{
+  "name": "ebenezer-frontend",
+  "version": "1.0.0",
+  "description": "CRUD hecho en VueJs # ebenezer-frontend",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davrv93/ebenezer-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davrv93/ebenezer-frontend/issues"
+  },
+  "homepage": "https://github.com/davrv93/ebenezer-frontend#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.20",
+    "angular": "^1.7.5",
+    "angular-material": "^1.1.10",
+    "angular-resource": "^1.7.5",
+    "angular-translate": "^2.18.1",
+    "gulp": "^3.9.1",
+    "gulp-serve": "^1.4.0",
+    "gulp-webserver": "^0.9.1",
+    "ng-resource": "^1.3.2",
+    "oclazyload": "^1.1.0"
+  }
+}
